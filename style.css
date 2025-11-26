@@ -1,0 +1,137 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-image: url(img/back.jpg);
+  background-repeat: no-repeat;    /* NE PAS répéter l’image */
+  background-size: cover;          /* adapter à l’écran */
+  background-position: center;     /* centrer l’image */
+  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+
+/* ===========================
+        HEADER
+=========================== */
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #005f99; /* bleu foncé */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: #BF124D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.171),
+      rgba(0, 0, 0, 0.171)
+    ),
+    url("img/.jpg") center/cover no-repeat;
+}
+
+
+header .logo {
+  margin-left: 500px;
+  font-size: 35px;
+  color: #5A0E24;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #BF124D;
+  margin-left: 25px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #BF124D;
+}
+
+/* ===========================
+        ASIDE (MENU)
+=========================== */
+aside {
+  width: 230px;
+  background: #0077b6;
+  padding-top: 100px; /* pour éviter le header */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  margin-top: 70px; /* espace pour que le menu commence sous le header */
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.171),
+      rgba(0, 0, 0, 0.171)
+    ),
+    url("img/imgnav.jpg") center/cover no-repeat;
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav ul li {
+  margin: 15px 0;
+}
+
+aside nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: lightpink;
+
+  background-color: rgba(0, 0, 0, 0.24);
+  font-size: 17px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+
+aside nav ul li a:hover {
+    text-shadow: 
+    0 0 5px #F875AA,
+    0 0 10px #F875AA,
+    0 0 20px #F875AA,
+    0 0 40px #F875AA; /* effet de glow */
+  background: #5A0E24;
+  transform: translateX(8px);
+}
+
+/* ===========================
+        SECTION + IFRAME
+=========================== */
+section {
+  margin-left: 220px;       /* espace pour menu */
+  margin-top: 62px;         /* espace pour header */
+  padding: 0;
+  width: calc(100% - 220px);
+  height: calc(100vh - 70px); /* hauteur automatique */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;              /* occupe toute la hauteur disponible */
+  border: none;
+  display: block;
+}
+
